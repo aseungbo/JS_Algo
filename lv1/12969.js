@@ -1,5 +1,5 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/12969
-
+// repeat
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', data => {
     const n = data.split(" ");

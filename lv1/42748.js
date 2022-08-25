@@ -1,5 +1,5 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/42748
-
+// slice, sort
 function solution(array, commands) {
     var answer = [];
 
