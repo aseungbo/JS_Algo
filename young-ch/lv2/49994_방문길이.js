@@ -18,7 +18,7 @@ function solution(dirs) {
         const moveX = prevX < x ? "" + prevX + x : "" + x + prevX;
         const moveY = prevY < y ? "" + prevY + y : "" + y + prevY;
         const move = moveX + moveY;
-        set.add(move);        
+        set.add(move);     
     }
     return set.size;
 }
