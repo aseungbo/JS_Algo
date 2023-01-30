@@ -10,15 +10,8 @@ const input = require("fs")
   .split(" ")
   .map(Number);
 
-// Timeout
 const [up, down, goal] = input;
 let height = 0;
 
-for (let day = 1; day < Infinity; day++) {
-  height += up;
-  if (height >= goal) {
-    console.log(day);
-    break;
-  }
-  height -= down;
-}
+const day = Math.ceil((goal - up) / (up - down)) + 1;
+console.log(day);
