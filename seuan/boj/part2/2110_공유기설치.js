@@ -31,11 +31,11 @@ const checkValidGap = (mid) => {
 };
 
 const binarySearch = () => {
-  while (row <= high) {
-    const mid = Math.floor((high + row) / 2);
+  while (low <= high) {
+    const mid = Math.floor((high + low) / 2);
     if (checkValidGap(mid)) {
       resGap = mid > resGap ? mid : resGap;
-      row = mid + 1;
+      low = mid + 1;
     } else high = mid - 1;
   }
 };
@@ -44,8 +44,8 @@ const [nc, ...arr] = input;
 const sortArr = arr.sort((a, b) => a - b);
 const gapArr = makeGapArray(sortArr);
 const numberOfShareBox = parseInt(nc[1]);
-let row = 1;
-let high = sortArr.at(-1) - row;
+let low = 1;
+let high = sortArr.at(-1) - low;
 let resGap = 0;
 
 binarySearch();

@@ -17,20 +17,20 @@ const [[n, m], trees] = input;
 
 const treeArr = trees.sort((a, b) => a - b);
 let height = 0;
-let row = 0;
+let low = 0;
 let high = treeArr.at(-1);
 
 const binarySearch = () => {
   while (true) {
-    if (row > high) {
+    if (low > high) {
       height = high;
       break;
     }
-    const mid = Math.floor(row + (high - row) / 2);
+    const mid = Math.floor(low + (high - low) / 2);
     height = mid;
     const sumOfCutted = sumOfCuttedTrees(treeArr, height);
     if (sumOfCutted > m) {
-      row = mid + 1;
+      low = mid + 1;
     } else if (sumOfCutted < m) {
       high = mid - 1;
     } else break;
