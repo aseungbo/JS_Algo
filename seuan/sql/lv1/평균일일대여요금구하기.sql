@@ -1,0 +1,8 @@
+/**
+* AVG를 통해 구하려는 column의 평균값 계산
+* ROUND를 통해 소수점 반올림
+*/
+
+SELECT ROUND(AVG(DAILY_FEE)) AS AVERAGE_FEE
+FROM CAR_RENTAL_COMPANY_CAR
+WHERE CAR_TYPE = "SUV"

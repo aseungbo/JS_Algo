@@ -1,0 +1,8 @@
+/**
+* 특정 column에 keyword가 포함된 경우를 찾고 싶다면 LIKE를 사용
+*/
+
+SELECT FACTORY_ID, FACTORY_NAME, ADDRESS
+FROM FOOD_FACTORY
+WHERE ADDRESS LIKE "%강원도%"
+ORDER BY FACTORY_ID
